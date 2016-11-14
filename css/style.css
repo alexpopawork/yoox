@@ -269,6 +269,11 @@ article.news-article.grey-section:last-of-type{
 	font-size: 16px;
 }
 
+#productCarousel .carousel-inner>.item>a>img,
+#productCarousel .carousel-inner>.item>img {
+	max-height: 195px;
+}
+
 
 
 
