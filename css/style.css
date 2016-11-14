@@ -333,6 +333,10 @@ a.download-pdf:hover, a.download-pdf:active{
 	.overflow-hidden-mobile{
 		overflow: hidden;
 	}
+	
+	.nopadding-mobile{
+		padding: 0;
+	}
 }
 
 @media (min-width: 960px) {
