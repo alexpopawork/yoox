@@ -1,8 +1,5 @@
 $(document).ready( function () {
 	
-	var totalNews = $(".news-article").length;
-	var hiddenNews = $(".news-article.hidden").length;
-	
 	//Make next ant previous slides partially visible
 	$('#ynapCarousel.carousel .item').each(function () {
 		var next = $(this).next();
@@ -16,6 +13,9 @@ $(document).ready( function () {
 			$(this).siblings(':first').children(':first-child').clone().appendTo($(this));
 		}
 	});
+	
+	var totalNews = $(".news-article").length;
+	var hiddenNews = $(".news-article.hidden").length;
 	
 	//If all the news but the first one are hidden, hide show-less button
 	if(totalNews - hiddenNews <= 1){
