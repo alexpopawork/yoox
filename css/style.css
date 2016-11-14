@@ -274,6 +274,39 @@ article.news-article.grey-section:last-of-type{
 	max-height: 195px;
 }
 
+#productCarousel .carousel-control.left,
+#productCarousel .carousel-control.right {
+	background: rgba(255, 255, 255, 0.3);
+	width: 21%;
+}
+
+#productCarousel #arrowleft, 
+#productCarousel #arrowright {
+	border: 1px solid #999;
+}
+
+#productCarousel #arrowleft {
+    position: absolute;
+    background-color: #fff;
+    display: inline-block;
+    top: 45%;
+	right: 0;
+    z-index: 5;
+	border-right: 0;
+    padding: 10px 8px;
+}
+
+#productCarousel #arrowright {
+    background-color: #FFF;
+    padding: 10px 8px;
+    position: absolute;
+    top: 45%;
+	left: 0;
+    z-index: 5;
+    display: inline-block;
+	border-left: 0;
+}
+
 
 
 
