@@ -276,7 +276,7 @@ article.news-article.grey-section:last-of-type{
 
 #productCarousel .carousel-control.left,
 #productCarousel .carousel-control.right {
-	background: rgba(255, 255, 255, 0.3);
+	background: none;
 	width: 21%;
 }
 
