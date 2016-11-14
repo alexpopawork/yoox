@@ -67,6 +67,8 @@ $(document).ready( function () {
 			var product = jQuery.parseJSON(data);
 			$(".yoox-tab-content .name").html(product.item.name);
 			$(".yoox-tab-content .details").html(product.item.details);
+			$(".yoox-tab-content .composition").html(product.item.composition);
+			$(".yoox-tab-content .modelDetails").html(product.item.modelDetails);
 		}).fail(function(){
 			console.log("Errore nella chiamata ajax");
 		});
