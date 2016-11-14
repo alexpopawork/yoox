@@ -48,13 +48,14 @@ $(document).ready( function () {
         e.preventDefault();
         $(this).siblings('a.active').removeClass("active");
         $(this).addClass("active");
+		var tabName = $(this).attr("href").replace("#", "");
 		
 		$.ajax({
 			method: "GET",
-			url: "data/one.json",
-		}).done(function( data ) {
-			console.log(data);
-			$(".yoox-tab-content").html(data);
+			url: "data/"+tabName+".json",
+		}).done(function(data) {
+			var product = jQuery.parseJSON(data);
+			$(".yoox-tab-content").html(product.name);
 		}).fail(function(){
 			console.log("Errore nella chiamata ajax");
 		});
