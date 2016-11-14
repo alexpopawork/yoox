@@ -4,7 +4,7 @@ $(document).ready( function () {
 	var hiddenNews = $(".news-article.hidden").length;
 	
 	//Make next ant previous slides partially visible
-	$('#ynapCarousel .carousel .item').each(function () {
+	$('.carousel .item').each(function () {
 		var next = $(this).next();
 		if (!next.length) {
 			next = $(this).siblings(':first');
