@@ -83,7 +83,7 @@ $(document).ready( function () {
 			$(".yoox-tab-content .composition").html(product.item.composition);
 			$(".yoox-tab-content .modelDetails").html(product.item.modelDetails.join("<br />"));
 			$("#productCarousel").find(".carousel-inner").html("");
-			for(var i = product.item.images.length; i >= 0; i--){
+			for(var i = 0; i < product.item.images.length; i++){
 				var active = (i == 0) ? "active" : "";
 				$("#productCarousel").find(".carousel-inner").append('<div class="item '+active+'"><img src="'+product.item.images[i]+'" alt=""></div>');
 				$("#productCarousel").carousel();
