@@ -52,7 +52,7 @@ $(document).ready( function () {
 		
 		$.ajax({
 			method: "GET",
-			dataType: "text"
+			dataType: "text",
 			url: "data/"+tabName+".json",
 		}).done(function(data) {
 			console.log(data);
