@@ -17,10 +17,6 @@ section.under-border{
 	border-bottom: 1px solid #ccc;
 }
 
-.overflow-hidden{
-	overflow: hidden;
-}
-
 .light-grey{
 	color: #666;
 }
@@ -332,6 +328,10 @@ a.download-pdf:hover, a.download-pdf:active{
 	#ynapCarousel .carousel-control.right {
 		background: rgba(255, 255, 255, 0.3);
 		width: 25%;
+	}
+		
+	.overflow-hidden-mobile{
+		overflow: hidden;
 	}
 }
 
