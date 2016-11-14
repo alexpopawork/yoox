@@ -63,12 +63,12 @@ $(document).ready( function () {
 			dataType: "text",
 			url: "data/"+tabName+".json",
 		}).done(function(data) {
-			console.log(data);
 			var product = jQuery.parseJSON(data);
 			$(".yoox-tab-content .name").html(product.item.name);
 			$(".yoox-tab-content .details").html(product.item.details);
 			$(".yoox-tab-content .composition").html(product.item.composition);
-			$(".yoox-tab-content .modelDetails").html(product.item.modelDetails.toString().replace(/(?:\r\n|\r|\n)/g, '<br />'));
+			console.log(typeof(product.item.modelDetails));
+			$(".yoox-tab-content .modelDetails").html(product.item.modelDetails.replace(/(?:\r\n|\r|\n)/g, '<br />'));
 		}).fail(function(){
 			console.log("Errore nella chiamata ajax");
 		});
