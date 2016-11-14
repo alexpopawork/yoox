@@ -3,11 +3,6 @@ $(document).ready( function () {
 	var totalNews = $(".news-article").length;
 	var hiddenNews = $(".news-article.hidden").length;
 	
-	//Main slider initialization
-	$('#ynapCarousel').carousel({
-		interval: 5000
-	});
-	
 	//Make next ant previous slides partially visible
 	$('#ynapCarousel .carousel .item').each(function () {
 		var next = $(this).next();
