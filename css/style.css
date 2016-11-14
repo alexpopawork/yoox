@@ -367,11 +367,6 @@ a.download-pdf:hover, a.download-pdf:active{
 		top: 33%;
 		padding: 2px 3px;
 	}
-		
-	.product-slider-wrapper{
-		padding: 0;
-		margin-top: 10px;
-	}
 	
 }
 
@@ -385,5 +380,10 @@ a.download-pdf:hover, a.download-pdf:active{
 	
 	.yoox-works{
 		font-size: 12px;
+	}
+		
+	.product-slider-wrapper{
+		padding: 0;
+		margin-top: 10px;
 	}
 }
