@@ -68,7 +68,7 @@ section.under-border{
 }
 
 #ynapCarousel #arrowright {
-    background-color: #FFF;
+    background-color: #fff;
     padding: 10px 8px;
     position: absolute;
     top: 45%;
@@ -269,12 +269,12 @@ a.download-pdf:hover, a.download-pdf:active{
 	right: 0;
     z-index: 5;
 	border-right: 0;
-    padding: 10px 8px;
+    padding: 7px 4px;
 }
 
 #productCarousel .arrowright {
-    background-color: #FFF;
-    padding: 10px 8px;
+    background-color: #fff;
+    padding: 7px 4px;
     position: absolute;
     top: 40%;
 	left: 0;
