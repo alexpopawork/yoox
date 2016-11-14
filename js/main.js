@@ -54,8 +54,9 @@ $(document).ready( function () {
 			method: "GET",
 			url: "data/"+tabName+".json",
 		}).done(function(data) {
+			console.log(data);
 			var product = jQuery.parseJSON(data);
-			$(".yoox-tab-content").html(product.name);
+			$(".yoox-tab-content").html(product.item.name);
 		}).fail(function(){
 			console.log("Errore nella chiamata ajax");
 		});
