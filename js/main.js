@@ -67,7 +67,7 @@ $(document).ready( function () {
 			$(".yoox-tab-content .name").html(product.item.name);
 			$(".yoox-tab-content .details").html(product.item.details);
 			$(".yoox-tab-content .composition").html(product.item.composition);
-			console.log(product.item.modelDetails);
+			console.log(product.item.modelDetails.join("<br />"));
 			//$(".yoox-tab-content .modelDetails").html(product.item.modelDetails.replace(/(?:\r\n|\r|\n)/g, '<br />'));
 		}).fail(function(){
 			console.log("Errore nella chiamata ajax");
