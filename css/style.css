@@ -341,4 +341,8 @@ article.news-article.grey-section:last-of-type{
 		width: 220%;
 		left: -60%;
 	}
+	
+	.yoox-tab-content{
+		padding-left: 0;
+	}
 }
