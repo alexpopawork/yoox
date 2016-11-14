@@ -48,8 +48,16 @@ $(document).ready( function () {
         e.preventDefault();
         $(this).siblings('a.active').removeClass("active");
         $(this).addClass("active");
-		var tabName = $(this).attr("href").replace("#", "");
+		getJson($(this));
 		
+	});
+	
+	//Inital ajax call for menu initialization
+	getJson($("div.yoox-tab-menu>div.list-group>a:first"));
+	
+	//Ajax call
+	function getJson(obj){
+		var tabName = obj.attr("href").replace("#", "");
 		$.ajax({
 			method: "GET",
 			dataType: "text",
@@ -57,10 +65,11 @@ $(document).ready( function () {
 		}).done(function(data) {
 			console.log(data);
 			var product = jQuery.parseJSON(data);
-			$(".yoox-tab-content").html(product.item.name);
+			$(".yoox-tab-content .name").html(product.item.name);
+			$(".yoox-tab-content .details").html(product.item.details);
 		}).fail(function(){
 			console.log("Errore nella chiamata ajax");
 		});
-	});
+	};
 	
 });
