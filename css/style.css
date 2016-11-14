@@ -37,35 +37,37 @@ section.under-border{
 	overflow: hidden;
 }
 
-.carousel-inner {
+#ynapCarousel .carousel-inner {
 	width: 174%;
     left: -37%;
 }
 
-.carousel-inner > .item.next,
-.carousel-inner > .item.active.right {
+#ynapCarousel .carousel-inner > .item.next,
+#ynapCarousel .carousel-inner > .item.active.right {
 	left: 0;
 	-webkit-transform: translate3d(33%, 0, 0);
 	transform: translate3d(33%, 0, 0);
 }
 
-.carousel-inner > .item.prev,
-.carousel-inner > .item.active.left {
+#ynapCarousel .carousel-inner > .item.prev,
+#ynapCarousel .carousel-inner > .item.active.left {
 	left: 0;
 	-webkit-transform: translate3d(-33%, 0, 0);
 	transform: translate3d(-33%, 0, 0);
 }
 
-.carousel-control.left, .carousel-control.right {
+#ynapCarousel .carousel-control.left,
+#ynapCarousel .carousel-control.right {
 	background: rgba(255, 255, 255, 0.3);
 	width: 21%;
 }
 
-#arrowleft, #arrowright {
+#ynapCarousel #arrowleft, 
+#ynapCarousel #arrowright {
 	border: 1px solid #999;
 }
 
-#arrowleft {
+#ynapCarousel #arrowleft {
     position: absolute;
     background-color: #fff;
     display: inline-block;
@@ -76,7 +78,7 @@ section.under-border{
     padding: 10px 8px;
 }
 
-#arrowright {
+#ynapCarousel #arrowright {
     background-color: #FFF;
     padding: 10px 8px;
     position: absolute;
@@ -96,7 +98,7 @@ section.under-border{
     left: -36.5%;
 }
 
-.carousel-control{
+#ynapCarousel .carousel-control{
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
 	filter: alpha(opacity=80);
 	-moz-opacity: 0.8;
@@ -104,7 +106,8 @@ section.under-border{
 	opacity: 0.8;
 }
 
-.item .col-xs-4:first-of-type, .item .col-xs-4:last-of-type{
+#ynapCarousel .item .col-xs-4:first-of-type, 
+#ynapCarousel .item .col-xs-4:last-of-type{
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 	filter: alpha(opacity=50);
 	-moz-opacity: .5;
@@ -112,7 +115,7 @@ section.under-border{
 	opacity: .5;
 }
 
-.item.active{
+#ynapCarousel .item.active{
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 	filter: alpha(opacity=100);
 	-moz-opacity: 1;
@@ -296,7 +299,7 @@ article.news-article.grey-section:last-of-type{
 }
 
 @media screen and (max-width: 768px) and (min-width: 220px) {
-	.carousel-inner {
+	#ynapCarousel .carousel-inner {
 		width: 220%;
 		left: -60%;
 	}
