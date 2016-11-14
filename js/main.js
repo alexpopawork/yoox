@@ -3,6 +3,25 @@ $(document).ready( function () {
 	var totalNews = $(".news-article").length;
 	var hiddenNews = $(".news-article.hidden").length;
 	
+	//Main slider initialization
+	$('#ynapCarousel').carousel({
+		interval: 5000
+	});
+	
+	//Make next ant previous slides partially visible
+	$('#ynapCarousel .carousel .item').each(function () {
+		var next = $(this).next();
+		if (!next.length) {
+			next = $(this).siblings(':first');
+		}
+		next.children(':first-child').clone().appendTo($(this));
+		if (next.next().length > 0) {
+			next.next().children(':first-child').clone().appendTo($(this));
+		} else {
+			$(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+		}
+	});
+	
 	//If all the news but the first one are hidden, hide show-less button
 	if(totalNews - hiddenNews <= 1){
 		$(".show-less").hide();
