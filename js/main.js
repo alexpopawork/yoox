@@ -54,7 +54,7 @@ $(document).ready( function () {
 			url: "data/one.json",
 		}).done(function( data ) {
 			console.log(data);
-			//$("#search-results").html(data);
+			$(".yoox-tab-content").html(data);
 		}).fail(function(){
 			console.log("Errore nella chiamata ajax");
 		});
