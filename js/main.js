@@ -51,7 +51,7 @@ $(document).ready( function () {
 		
 		$.ajax({
 			method: "GET",
-			url: "../data/one.json",
+			url: "data/one.json",
 		}).done(function( data ) {
 			console.log(data);
 			//$("#search-results").html(data);
