@@ -334,8 +334,9 @@ a.download-pdf:hover, a.download-pdf:active{
 		overflow: hidden;
 	}
 	
-	.nopadding-mobile{
+	.product-slider-wrapper{
 		padding: 0;
+		margin-top: 10px;
 	}
 }
 
