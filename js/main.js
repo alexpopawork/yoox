@@ -84,7 +84,9 @@ $(document).ready( function () {
 			$(".yoox-tab-content .modelDetails").html(product.item.modelDetails.join("<br />"));
 			$("#productCarousel").html("");
 			for(var i = 0; i < product.item.images.length; i++){
-				console.log(product.item.images[i]);
+				var active = (i == 0) ? "active" : "";
+				$("#productCarousel").append('<div class="item '+active+'"><img src="'+product.item.images[i]+'" alt=""></div>');
+				$("#productCarousel").carousel();
 			}
 		}).fail(function(){
 			console.log("Errore nella chiamata ajax");
