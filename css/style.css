@@ -280,12 +280,12 @@ article.news-article.grey-section:last-of-type{
 	width: 21%;
 }
 
-#productCarousel #arrowleft, 
-#productCarousel #arrowright {
+#productCarousel .arrowleft, 
+#productCarousel .arrowright {
 	border: 1px solid #999;
 }
 
-#productCarousel #arrowleft {
+#productCarousel .arrowleft {
     position: absolute;
     background-color: #fff;
     display: inline-block;
@@ -296,7 +296,7 @@ article.news-article.grey-section:last-of-type{
     padding: 10px 8px;
 }
 
-#productCarousel #arrowright {
+#productCarousel .arrowright {
     background-color: #FFF;
     padding: 10px 8px;
     position: absolute;
