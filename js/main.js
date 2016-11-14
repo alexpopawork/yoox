@@ -82,6 +82,10 @@ $(document).ready( function () {
 			$(".yoox-tab-content .details").html(product.item.details);
 			$(".yoox-tab-content .composition").html(product.item.composition);
 			$(".yoox-tab-content .modelDetails").html(product.item.modelDetails.join("<br />"));
+			$("#productCarousel").html("");
+			product.item.images.each(function(){
+				console.log($(this));
+			});
 		}).fail(function(){
 			console.log("Errore nella chiamata ajax");
 		});
