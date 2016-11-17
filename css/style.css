@@ -9,6 +9,12 @@ section{
 	padding: 20px 0 0;
 }
 
+hr{
+	border-top: 1px solid #e4e4e4;
+	margin-top: 27px;
+    margin-bottom: 7px;
+}
+
 section.padded{
 	padding: 20px 0 25px 0;
 }
@@ -134,6 +140,20 @@ section.under-border{
 
 .yoox-text{
 	font-size: 18px;
+	margin: 13px 0px 32px;
+	-webkit-column-count: 2; /* Chrome, Safari, Opera */
+	-moz-column-count: 2; /* Firefox */
+	column-count: 2;
+  	-webkit-column-gap: 15px; /* Chrome, Safari, Opera */ 
+	-moz-column-gap: 15px; /* Firefox */
+	column-gap: 15px;
+}
+
+.contact-text{
+	margin: 16px 0px 23px;
+	-webkit-column-count: 1; /* Chrome, Safari, Opera */
+	-moz-column-count: 1; /* Firefox */
+	column-count: 1;
 }
 
 .yoox-text.title{
@@ -176,16 +196,6 @@ a.download-pdf:hover, a.download-pdf:active{
 .grey-button img{
 	vertical-align: top;
 	margin: 9px 0 0px 7px;
-}
-
-.article-body{
-	margin: 13px 0px 32px;
-	-webkit-column-count: 2; /* Chrome, Safari, Opera */
-	-moz-column-count: 2; /* Firefox */
-	column-count: 2;
-  	-webkit-column-gap: 15px; /* Chrome, Safari, Opera */ 
-	-moz-column-gap: 15px; /* Firefox */
-	column-gap: 15px;
 }
 
 .yoox-tab-menu{
@@ -283,7 +293,55 @@ a.download-pdf:hover, a.download-pdf:active{
 	border-left: 0;
 }
 
+.contact-title{
+	margin-top: 18px;
+}
 
+.contact-label{
+	font-size: 18px;
+	color: #999;
+	padding-top: 3px;
+}
+
+.contact-input input{
+	background-color: #fff;
+	padding: 5px 27px 5px 5px;
+	-webkit-box-shadow: inset 0px 0px 10px 0px rgba(220,220,220,1);
+	-moz-box-shadow: inset 0px 0px 10px 0px rgba(220,220,220,1);
+	box-shadow: inset 0px 0px 10px 0px rgba(220,220,220,1);
+	border: none;
+	width: 100%;
+}
+.contact-input{
+	margin-bottom: 19px;
+	position: relative;
+}
+
+.contact-input label.error{
+	position: absolute;
+    right: 22px;
+    top: 3px;
+}
+
+.black-btn{
+	background: #5f5f5f;
+	background: -moz-linear-gradient(top,  #5f5f5f 0%, #020202 100%);
+	background: -webkit-linear-gradient(top,  #5f5f5f 0%,#020202 100%);
+	background: linear-gradient(to bottom,  #5f5f5f 0%,#020202 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5f5f5f', endColorstr='#000000',GradientType=0 );
+	color: #fff;
+	font-size: 22px;
+	border: none;
+	padding: 0px 42px;
+}
+
+.copyright{
+	font-style: italic;
+	color: #666;
+	font-size: 10px;
+	font-family: Arial, sans-serif;
+	margin-bottom: 70px;
+}
 
 
 
@@ -371,7 +429,7 @@ a.download-pdf:hover, a.download-pdf:active{
 }
 
 @media screen and (max-width: 375px) {
-	.article-body{
+	.yoox-text{
 		margin: 13px 0px 32px;
 		-webkit-column-count: 1; /* Chrome, Safari, Opera */
 		-moz-column-count: 1; /* Firefox */

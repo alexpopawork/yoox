@@ -93,4 +93,31 @@ $(document).ready( function () {
 		});
 	};
 	
+	//Form validation
+	$('#contact-form').validate({
+		rules: {
+			name: "required",
+			email: {
+				required: true,
+				email: true
+			},
+			phone: {
+				required: false,
+				digits: true,
+				maxlength: 11
+			}
+		},
+		messages: {
+			name: "<img src=\"img\\field_warning.png\" alt=\"\" />",
+			email: "<img src=\"img\\field_warning.png\" alt=\"\" />",
+			phone: "<img src=\"img\\field_warning.png\" alt=\"\" />"
+		},
+		//Demo submission
+		submitHandler: function (form, e) {
+			e.preventDefault();
+            $('#contact-form').html("<h2 class=\"knockLight\">Thank you for your message. We'll get back to you soon.</h2>");
+            //form.submit();
+        }
+	});
+	
 });
