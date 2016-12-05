@@ -296,6 +296,13 @@ a.download-pdf {
     display: inline-block;
     border-left: 0;
   }
+  
+  .carousel-inner > .active.left {
+  left: -100%;
+}
+.carousel-inner > .active.right {
+  left: 100%;
+}
 }
 
 .contact-title {
