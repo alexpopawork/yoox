@@ -90,7 +90,7 @@ $(document).ready( function () {
 			url: "data/"+tabName+".json"
 		}).done(function(data) {
 			var product = jQuery.parseJSON(data);
-			$.ajax(
+			$.ajax({
 				url: "templates/product.info.template.html"
 			}).done(function(template) {
 				//Sending data to mustache template to render the info box
