@@ -323,17 +323,8 @@ a.download-pdf {
   position: relative;
   label.error {
 	position: absolute;
-    left: 90%;
+    right: 22px;
     top: 3px;
-    width: 100%;
-    color: #666;
-    font-size: 13px;
-    font-weight: normal;
-	& img{
-	  vertical-align: middle;
-	  margin-right: 10px;
-	  padding: 4px 0 8px;
-	}
   }
 }
 
