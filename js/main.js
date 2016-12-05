@@ -130,17 +130,9 @@ $(document).ready( function () {
 			}
 		},
 		messages: {
-			name: {
-				required: errorImg+"The name is required"
-			},
-			email: {
-				required: errorImg+"The email field is required",
-				email: errorImg+"Please enter a valid email address"
-			},
-			phone: {
-				digits: errorImg+"Please enter only digits",
-				maxlength: jQuery.validator.format(errorImg+"Please enter no more than {0} characters."),
-			}
+			name: errorImg,
+			email: errorImg,
+			phone: errorImg
 		},
 		//Demo submission
 		submitHandler: function (form, e) {
