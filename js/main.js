@@ -10,6 +10,7 @@ $(document).ready( function () {
 	var hiddenNewsArticles = ".news-article.hidden";
 	var ajaxMenuItems = "div.yoox-tab-menu>div.list-group>a";
 	var errorImg = "<img src=\"img\\field_warning.png\" alt=\"\" />";
+	var tabData = ".tab-data";
 	
 	//Make next and previous slides from the main slider partially visible
 	$(mainCarousel+'.carousel .item').each(function () {
@@ -109,7 +110,7 @@ $(document).ready( function () {
 					prodComposition: product.item.composition,
 					prodModelDetails: product.item.modelDetails.join("<br />")
 				});
-				$(".yoox-tab-content").html(rendered);
+				$(tabData).html(rendered);
 				$(productCarousel).find(".carousel-inner").html("");
 				for(var i = 0; i < product.item.images.length; i++){
 					var active = (i == 0) ? "active" : "";
