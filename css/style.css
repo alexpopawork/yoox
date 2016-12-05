@@ -44,29 +44,32 @@ section.under-border {
   -webkit-transform: translate3d(-33%, 0, 0);
   transform: translate3d(-33%, 0, 0); }
 
+#arrowleft, #arrowright {
+  border: 1px solid #999; }
+
+#arrowleft {
+  position: absolute;
+  background-color: #fff;
+  display: inline-block;
+  top: 45%;
+  right: 0;
+  z-index: 5;
+  border-right: 0;
+  padding: 10px 8px; }
+
+#arrowright {
+  background-color: #fff;
+  padding: 10px 8px;
+  position: absolute;
+  top: 45%;
+  left: 0;
+  z-index: 5;
+  display: inline-block;
+  border-left: 0; }
+
 #ynapCarousel {
   width: 173%;
   left: -36.5%; }
-  #ynapCarousel #arrowleft, #ynapCarousel #arrowright {
-    border: 1px solid #999; }
-  #ynapCarousel #arrowleft {
-    position: absolute;
-    background-color: #fff;
-    display: inline-block;
-    top: 45%;
-    right: 0;
-    z-index: 5;
-    border-right: 0;
-    padding: 10px 8px; }
-  #ynapCarousel #arrowright {
-    background-color: #fff;
-    padding: 10px 8px;
-    position: absolute;
-    top: 45%;
-    left: 0;
-    z-index: 5;
-    display: inline-block;
-    border-left: 0; }
   #ynapCarousel .col-xs-4 {
     padding: 0; }
   #ynapCarousel .carousel-control {
