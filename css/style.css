@@ -145,7 +145,8 @@ ul.yoox-works {
 
 a.download-pdf {
   font-size: 16px;
-  color: #999; }
+  color: #999;
+  text-decoration: underline; }
   a.download-pdf:hover, a.download-pdf:active {
     color: #999; }
 
