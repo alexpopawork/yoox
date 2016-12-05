@@ -50,7 +50,7 @@ section {
   overflow: hidden;
 }
 
-#ynapCarousel{
+
   .carousel-inner > .item {
     &.next, &.active.right {
       left: 0;
@@ -63,9 +63,9 @@ section {
       transform: translate3d(-33%, 0, 0);
     }
   }
-}
 
-/* #ynapCarousel { */
+
+#ynapCarousel {
   #arrowleft, #arrowright {
     border: 1px solid #999;
   }
@@ -119,7 +119,7 @@ section {
       opacity: 1;
     }
   }
-
+}
 
 .slide-img {
   width: 100%;
