@@ -26,6 +26,9 @@ $(document).ready( function () {
 		}
 	});
 	
+	//Initialize main carousel
+	$(mainCarousel).carousel();
+	
 	var totalNews = $(newsArticles).length;
 	var hiddenNews = $(hiddenNewsArticles).length;
 	
