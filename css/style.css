@@ -241,6 +241,10 @@ a.download-pdf {
   left: -100%; }
 #productCarousel .carousel-inner > .active.right {
   left: 100%; }
+#productCarousel .carousel-inner > .next {
+  left: 100%; }
+#productCarousel .carousel-inner > .prev {
+  left: -100%; }
 
 .contact-title {
   margin-top: 18px; }

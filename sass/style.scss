@@ -298,11 +298,17 @@ a.download-pdf {
   }
   
   .carousel-inner > .active.left {
-  left: -100%;
-}
-.carousel-inner > .active.right {
-  left: 100%;
-}
+    left: -100%;
+  }
+  .carousel-inner > .active.right {
+    left: 100%;
+  }
+  .carousel-inner > .next {
+    left: 100%;
+  }
+  .carousel-inner > .prev {
+    left: -100%;
+  }
 }
 
 .contact-title {
