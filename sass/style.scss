@@ -65,6 +65,7 @@ section {
   }
 }
 
+/* #ynapCarousel { */
   #arrowleft, #arrowright {
     border: 1px solid #999;
   }
@@ -88,7 +89,6 @@ section {
     display: inline-block;
     border-left: 0;
   }
-#ynapCarousel {
   .col-xs-4 {
     padding: 0;
   }
@@ -119,7 +119,7 @@ section {
       opacity: 1;
     }
   }
-}
+
 
 .slide-img {
   width: 100%;
