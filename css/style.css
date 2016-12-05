@@ -237,6 +237,14 @@ a.download-pdf {
   z-index: 5;
   display: inline-block;
   border-left: 0; }
+#productCarousel .carousel-inner > .item.next, #productCarousel .carousel-inner > .item.active.right {
+  left: 90px;
+  -webkit-transform: translate3d(33%, 0, 0);
+  transform: translate3d(33%, 0, 0); }
+#productCarousel .carousel-inner > .item.prev, #productCarousel .carousel-inner > .item.active.left {
+  left: -90px;
+  -webkit-transform: translate3d(-33%, 0, 0);
+  transform: translate3d(-33%, 0, 0); }
 
 .contact-title {
   margin-top: 18px; }
