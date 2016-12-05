@@ -296,19 +296,6 @@ a.download-pdf {
     display: inline-block;
     border-left: 0;
   }
-
-  .carousel-inner > .item {
-    &.next, &.active.right {
-      left: 50px;
-      -webkit-transform: translate3d(33%, 0, 0);
-      transform: translate3d(33%, 0, 0);
-    }
-    &.prev, &.active.left {
-      left: -90px;
-      -webkit-transform: translate3d(-33%, 0, 0);
-      transform: translate3d(-33%, 0, 0);
-    }
-  }
 }
 
 .contact-title {
