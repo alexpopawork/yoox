@@ -86,30 +86,37 @@ $(document).ready( function () {
 		$.ajax({
 			method: "GET",
 			dataType: "text",
-			url: "data/"+tabName+".json",
+			url: "data/"+tabName+".json"
 		}).done(function(data) {
 			var product = jQuery.parseJSON(data);
-			$.get("templates/product.info.template.html", function(template) {
+			$.ajax(
+				url: "templates/product.info.template.html"
+			}).done(function(template) {
 				//Sending data to mustache template to render the info box
+				
+				/* var prodImages = [];
+				for(var i = 0; i < product.item.images.length; i++){
+					var active = (i == 0) ? "active" : "";
+					prodImages.push({
+						active: active,
+						image: product.item.images[i];
+					});
+				} */
+				
 				var rendered = Mustache.render(template, {
 					prodName: product.item.name,
 					prodDetails: product.item.details,
 					prodComposition: product.item.composition,
-					prodModelDetails: product.item.modelDetails.join("<br />"),
-					prodImages: product.item.images
+					prodModelDetails: product.item.modelDetails.join("<br />")
 				});
 				$(".yoox-tab-content").html(rendered);
+				$(productCarousel).find(".carousel-inner").html("");
+				for(var i = 0; i < product.item.images.length; i++){
+					var active = (i == 0) ? "active" : "";
+					$(productCarousel).find(".carousel-inner").append('<div class="item '+active+'"><img src="'+product.item.images[i]+'" alt=""></div>');
+					$(productCarousel).carousel();
+				}
 			});
-			$(".yoox-tab-content .name").html(product.item.name);
-			$(".yoox-tab-content .details").html(product.item.details);
-			$(".yoox-tab-content .composition").html(product.item.composition);
-			$(".yoox-tab-content .modelDetails").html(product.item.modelDetails.join("<br />"));
-			$(productCarousel).find(".carousel-inner").html("");
-			for(var i = 0; i < product.item.images.length; i++){
-				var active = (i == 0) ? "active" : "";
-				$(productCarousel).find(".carousel-inner").append('<div class="item '+active+'"><img src="'+product.item.images[i]+'" alt=""></div>');
-				$(productCarousel).carousel();
-			}
 		}).fail(function(xhr, status, error){
 			console.log("Errore nella chiamata ajax", xhr);
 		});
