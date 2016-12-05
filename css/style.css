@@ -238,7 +238,7 @@ a.download-pdf {
   display: inline-block;
   border-left: 0; }
 #productCarousel .carousel-inner > .item.next, #productCarousel .carousel-inner > .item.active.right {
-  left: 90px;
+  left: 50px;
   -webkit-transform: translate3d(33%, 0, 0);
   transform: translate3d(33%, 0, 0); }
 #productCarousel .carousel-inner > .item.prev, #productCarousel .carousel-inner > .item.active.left {

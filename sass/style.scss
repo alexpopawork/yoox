@@ -299,7 +299,7 @@ a.download-pdf {
 
   .carousel-inner > .item {
     &.next, &.active.right {
-      left: 90px;
+      left: 50px;
       -webkit-transform: translate3d(33%, 0, 0);
       transform: translate3d(33%, 0, 0);
     }
