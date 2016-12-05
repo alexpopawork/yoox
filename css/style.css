@@ -215,52 +215,40 @@ a.download-pdf {
 .size-16 {
   font-size: 16px; }
 
-#productCarousel {
-  /* .carousel-inner > .next.left,
-  .carousel-inner > .prev.right {
-    left: 0;
-  } */ }
-  #productCarousel .carousel-inner > .item > a > img, #productCarousel .carousel-inner > .item > img {
-    max-height: 195px; }
-  #productCarousel .arrowleft, #productCarousel .arrowright {
-    border: 1px solid #999; }
-  #productCarousel .arrowleft {
-    position: absolute;
-    background-color: #fff;
-    display: inline-block;
-    top: 40%;
-    right: 0;
-    z-index: 5;
-    border-right: 0;
-    padding: 7px 4px; }
-  #productCarousel .arrowright {
-    background-color: #fff;
-    padding: 7px 4px;
-    position: absolute;
-    top: 40%;
-    left: 0;
-    z-index: 5;
-    display: inline-block;
-    border-left: 0; }
-  #productCarousel .carousel-inner > .active,
-  #productCarousel .carousel-inner > .next,
-  #productCarousel .carousel-inner > .prev {
-    display: block; }
-  #productCarousel .carousel-inner > .active {
-    left: 0; }
-  #productCarousel .carousel-inner > .next,
-  #productCarousel .carousel-inner > .prev {
-    position: absolute;
-    top: 0;
-    width: 100%; }
-  #productCarousel .carousel-inner > .next {
-    left: 100%; }
-  #productCarousel .carousel-inner > .prev {
-    left: -100%; }
-  #productCarousel .carousel-inner > .active.left {
-    left: -100%; }
-  #productCarousel .carousel-inner > .active.right {
-    left: 100%; }
+#productCarousel .carousel-inner > .item > a > img, #productCarousel .carousel-inner > .item > img {
+  max-height: 195px; }
+#productCarousel .arrowleft, #productCarousel .arrowright {
+  border: 1px solid #999; }
+#productCarousel .arrowleft {
+  position: absolute;
+  background-color: #fff;
+  display: inline-block;
+  top: 40%;
+  right: 0;
+  z-index: 5;
+  border-right: 0;
+  padding: 7px 4px; }
+#productCarousel .arrowright {
+  background-color: #fff;
+  padding: 7px 4px;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  z-index: 5;
+  display: inline-block;
+  border-left: 0; }
+
+.carousel-fade .carousel-inner .item {
+  transition-property: opacity; }
+.carousel-fade .carousel-inner .item, .carousel-fade .carousel-inner .active.left, .carousel-fade .carousel-inner .active.right {
+  opacity: 0; }
+.carousel-fade .carousel-inner .active, .carousel-fade .carousel-inner .next.left, .carousel-fade .carousel-inner .prev.right {
+  opacity: 1; }
+.carousel-fade .carousel-inner .next, .carousel-fade .carousel-inner .prev, .carousel-fade .carousel-inner .active.left, .carousel-fade .carousel-inner .active.right {
+  left: 0;
+  transform: translate3d(0, 0, 0); }
+.carousel-fade .carousel-control {
+  z-index: 2; }
 
 .contact-title {
   margin-top: 18px; }
