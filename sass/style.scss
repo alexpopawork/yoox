@@ -50,7 +50,7 @@ section {
   overflow: hidden;
 }
 
-
+.car{
 .carousel-inner > .item {
   &.next, &.active.right {
     left: 0;
@@ -62,7 +62,7 @@ section {
     -webkit-transform: translate3d(-33%, 0, 0);
     transform: translate3d(-33%, 0, 0);
   }
-}
+}}
 
 #ynapCarousel {
   #arrowleft, #arrowright {
