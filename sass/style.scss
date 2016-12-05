@@ -63,6 +63,21 @@ section {
   }
 }
 
+#productCarousel{
+  .carousel-inner > .item {
+    &.next, &.active.right {
+      left: -90px;
+      -webkit-transform: translate3d(33%, 0, 0);
+      transform: translate3d(33%, 0, 0);
+    }
+    &.prev, &.active.left {
+      left: -90px;
+      -webkit-transform: translate3d(-33%, 0, 0);
+      transform: translate3d(-33%, 0, 0);
+    }
+  }
+}
+
 #ynapCarousel {
   #arrowleft, #arrowright {
     border: 1px solid #999;
