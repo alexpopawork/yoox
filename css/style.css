@@ -34,15 +34,14 @@ section.under-border {
 
 .carousel {
   overflow: hidden; }
-
-.car .carousel-inner > .item.next, .car .carousel-inner > .item.active.right {
-  left: 0;
-  -webkit-transform: translate3d(33%, 0, 0);
-  transform: translate3d(33%, 0, 0); }
-.car .carousel-inner > .item.prev, .car .carousel-inner > .item.active.left {
-  left: 0;
-  -webkit-transform: translate3d(-33%, 0, 0);
-  transform: translate3d(-33%, 0, 0); }
+  .carousel .carousel-inner > .item.next, .carousel .carousel-inner > .item.active.right {
+    left: 0;
+    -webkit-transform: translate3d(33%, 0, 0);
+    transform: translate3d(33%, 0, 0); }
+  .carousel .carousel-inner > .item.prev, .carousel .carousel-inner > .item.active.left {
+    left: 0;
+    -webkit-transform: translate3d(-33%, 0, 0);
+    transform: translate3d(-33%, 0, 0); }
 
 #ynapCarousel {
   width: 173%;
