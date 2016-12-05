@@ -94,16 +94,6 @@ $(document).ready( function () {
 				url: "templates/product.info.template.html"
 			}).done(function(template) {
 				//Sending data to mustache template to render the info box
-				
-				/* var prodImages = [];
-				for(var i = 0; i < product.item.images.length; i++){
-					var active = (i == 0) ? "active" : "";
-					prodImages.push({
-						active: active,
-						image: product.item.images[i];
-					});
-				} */
-				
 				var rendered = Mustache.render(template, {
 					prodName: product.item.name,
 					prodDetails: product.item.details,
@@ -111,6 +101,8 @@ $(document).ready( function () {
 					prodModelDetails: product.item.modelDetails.join("<br />")
 				});
 				$(tabData).html(rendered);
+				
+				//Creating image carousel for each product
 				$(productCarousel).find(".carousel-inner").html("");
 				for(var i = 0; i < product.item.images.length; i++){
 					var active = (i == 0) ? "active" : "";
