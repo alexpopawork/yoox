@@ -1,7 +1,18 @@
 $(document).ready( function () {
 	
-	//Make next ant previous slides partially visible
-	$('#ynapCarousel.carousel .item').each(function () {
+	//Selectors
+	var mainCarousel = "#ynapCarousel";
+	var showLessBtn = ".show-less";
+	var showMoreBtn = ".show-more";
+	var contactForm = "#contact-form";
+	var productCarousel = "#productCarousel";
+	var newsArticles = ".news-article";
+	var hiddenNewsArticles = ".news-article.hidden";
+	var ajaxMenuItems = "div.yoox-tab-menu>div.list-group>a";
+	var errorImg = "<img src=\"img\\field_warning.png\" alt=\"\" />";
+	
+	//Make next and previous slides from the main slider partially visible
+	$(mainCarousel+'.carousel .item').each(function () {
 		var next = $(this).next();
 		if (!next.length) {
 			next = $(this).siblings(':first');
@@ -14,35 +25,35 @@ $(document).ready( function () {
 		}
 	});
 	
-	var totalNews = $(".news-article").length;
-	var hiddenNews = $(".news-article.hidden").length;
+	var totalNews = $(newsArticles).length;
+	var hiddenNews = $(hiddenNewsArticles).length;
 	
 	//If all the news but the first one are hidden, hide show-less button
 	if(totalNews - hiddenNews <= 1){
-		$(".show-less").hide();
+		$(showLessBtn).hide();
 	}
 	
 	//If there's no more article to show, hide the show-more button
 	if(hiddenNews == 0){
-		$(".show-more").hide();
+		$(showMoreBtn).hide();
 	};
 	
 	//Show-more button handler
-	$(".show-more").on("click", function(){
+	$(showMoreBtn).on("click", function(){
 		if(hiddenNews != 0){
-			$(".news-article.hidden").each(function(){
+			$(hiddenNewsArticles).each(function(){
 				$(this).fadeIn("slow").removeClass("hidden");
 				hiddenNews--;
 			});
-			$(".show-less").show();
+			$(showLessBtn).show();
 			$(this).hide();
 		};
 	});
 	
 	//Show-less button handler
-	$(".show-less").on("click", function(){
+	$(showLessBtn).on("click", function(){
 		if(totalNews - hiddenNews > 1){
-			$(".news-article").not(".hidden").not(".news-article:first").each(function(){
+			$(newsArticles).not(".hidden").not(newsArticles+":first").each(function(){
 				$(this).fadeOut("slow", function(){
 					$(this).addClass("hidden");
 				});
@@ -53,12 +64,12 @@ $(document).ready( function () {
 			$(this).hide();
 		};
 		if(hiddenNews > 0){
-			$(".show-more").show();
+			$(showMoreBtn).show();
 		};
 	});
 	
 	//Ajax menu handler
-	$("div.yoox-tab-menu>div.list-group>a").click(function(e) {
+	$(ajaxMenuItems).click(function(e) {
         e.preventDefault();
         $(this).siblings('a.active').removeClass("active");
         $(this).addClass("active");
@@ -67,7 +78,7 @@ $(document).ready( function () {
 	});
 	
 	//Inital ajax call for menu initialization
-	getJson($("div.yoox-tab-menu>div.list-group>a:first"));
+	getJson($(ajaxMenuItems+":first"));
 	
 	//Ajax call
 	function getJson(obj){
@@ -78,23 +89,27 @@ $(document).ready( function () {
 			url: "data/"+tabName+".json",
 		}).done(function(data) {
 			var product = jQuery.parseJSON(data);
+			$.get("templates/product.info.template.html", function(template) {
+				var rendered = Mustache.render(template, {name: "Luke"});
+				$(".yoox-tab-content").html(rendered);
+			});
 			$(".yoox-tab-content .name").html(product.item.name);
 			$(".yoox-tab-content .details").html(product.item.details);
 			$(".yoox-tab-content .composition").html(product.item.composition);
 			$(".yoox-tab-content .modelDetails").html(product.item.modelDetails.join("<br />"));
-			$("#productCarousel").find(".carousel-inner").html("");
+			$(productCarousel).find(".carousel-inner").html("");
 			for(var i = 0; i < product.item.images.length; i++){
 				var active = (i == 0) ? "active" : "";
-				$("#productCarousel").find(".carousel-inner").append('<div class="item '+active+'"><img src="'+product.item.images[i]+'" alt=""></div>');
-				$("#productCarousel").carousel();
+				$(productCarousel).find(".carousel-inner").append('<div class="item '+active+'"><img src="'+product.item.images[i]+'" alt=""></div>');
+				$(productCarousel).carousel();
 			}
-		}).fail(function(){
-			console.log("Errore nella chiamata ajax");
+		}).fail(function(xhr, status, error){
+			console.log("Errore nella chiamata ajax", xhr);
 		});
 	};
 	
 	//Form validation
-	$('#contact-form').validate({
+	$(contactForm).validate({
 		rules: {
 			name: "required",
 			email: {
@@ -108,14 +123,22 @@ $(document).ready( function () {
 			}
 		},
 		messages: {
-			name: "<img src=\"img\\field_warning.png\" alt=\"\" />",
-			email: "<img src=\"img\\field_warning.png\" alt=\"\" />",
-			phone: "<img src=\"img\\field_warning.png\" alt=\"\" />"
+			name: {
+				required: errorImg+"The name is required"
+			},
+			email: {
+				required: errorImg+"The email field is required",
+				email: errorImg+"Please enter a valid email address"
+			},
+			phone: {
+				digits: errorImg+"Please enter only digits",
+				maxlength: jQuery.validator.format(errorImg+"Please enter no more than {0} characters."),
+			}
 		},
 		//Demo submission
 		submitHandler: function (form, e) {
 			e.preventDefault();
-            $('#contact-form').html("<h2 class=\"knockLight\">Thank you for your message. We'll get back to you soon.</h2>");
+            $(contactForm).html("<h2 class=\"knockLight\">Thank you for your message. We'll get back to you soon.</h2>");
             //form.submit();
         }
 	});
