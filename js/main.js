@@ -90,7 +90,14 @@ $(document).ready( function () {
 		}).done(function(data) {
 			var product = jQuery.parseJSON(data);
 			$.get("templates/product.info.template.html", function(template) {
-				var rendered = Mustache.render(template, {name: "Luke"});
+				//Sending data to mustache template to render the info box
+				var rendered = Mustache.render(template, {
+					prodName: product.item.name,
+					prodDetails: product.item.details,
+					prodComposition: product.item.composition,
+					prodModelDetails: product.item.modelDetails.join("<br />"),
+					prodImages: product.item.images
+				});
 				$(".yoox-tab-content").html(rendered);
 			});
 			$(".yoox-tab-content .name").html(product.item.name);
