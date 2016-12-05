@@ -54,11 +54,14 @@ section {
 .carousel-inner > .item {
   &.next, &.active.right {
     left: 0;
-    
+    -webkit-transform: translate3d(33%, 0, 0);
+    transform: translate3d(33%, 0, 0);
   }
   &.prev, &.active.left {
     left: 0;
-    }
+    -webkit-transform: translate3d(-33%, 0, 0);
+    transform: translate3d(-33%, 0, 0);
+  }
 }
 
 #ynapCarousel {
@@ -294,18 +297,36 @@ a.download-pdf {
     border-left: 0;
   }
   
-  .carousel-inner > .active.left {
-    left: -100%;
-  }
-  .carousel-inner > .active.right {
-    left: 100%;
-  }
-  .carousel-inner > .next {
-    left: 100%;
-  }
-  .carousel-inner > .prev {
-    left: -100%;
-  }
+  .carousel-inner > .active,
+.carousel-inner > .next,
+.carousel-inner > .prev {
+  display: block;
+}
+.carousel-inner > .active {
+  left: 0;
+}
+.carousel-inner > .next,
+.carousel-inner > .prev {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.carousel-inner > .next {
+  left: 100%;
+}
+.carousel-inner > .prev {
+  left: -100%;
+}
+.carousel-inner > .next.left,
+.carousel-inner > .prev.right {
+  left: 0;
+}
+.carousel-inner > .active.left {
+  left: -100%;
+}
+.carousel-inner > .active.right {
+  left: 100%;
+}
 }
 
 .contact-title {

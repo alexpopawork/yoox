@@ -36,9 +36,13 @@ section.under-border {
   overflow: hidden; }
 
 .carousel-inner > .item.next, .carousel-inner > .item.active.right {
-  left: 0; }
+  left: 0;
+  -webkit-transform: translate3d(33%, 0, 0);
+  transform: translate3d(33%, 0, 0); }
 .carousel-inner > .item.prev, .carousel-inner > .item.active.left {
-  left: 0; }
+  left: 0;
+  -webkit-transform: translate3d(-33%, 0, 0);
+  transform: translate3d(-33%, 0, 0); }
 
 #ynapCarousel {
   width: 173%;
@@ -233,14 +237,28 @@ a.download-pdf {
   z-index: 5;
   display: inline-block;
   border-left: 0; }
-#productCarousel .carousel-inner > .active.left {
-  left: -100%; }
-#productCarousel .carousel-inner > .active.right {
-  left: 100%; }
+#productCarousel .carousel-inner > .active,
+#productCarousel .carousel-inner > .next,
+#productCarousel .carousel-inner > .prev {
+  display: block; }
+#productCarousel .carousel-inner > .active {
+  left: 0; }
+#productCarousel .carousel-inner > .next,
+#productCarousel .carousel-inner > .prev {
+  position: absolute;
+  top: 0;
+  width: 100%; }
 #productCarousel .carousel-inner > .next {
   left: 100%; }
 #productCarousel .carousel-inner > .prev {
   left: -100%; }
+#productCarousel .carousel-inner > .next.left,
+#productCarousel .carousel-inner > .prev.right {
+  left: 0; }
+#productCarousel .carousel-inner > .active.left {
+  left: -100%; }
+#productCarousel .carousel-inner > .active.right {
+  left: 100%; }
 
 .contact-title {
   margin-top: 18px; }
