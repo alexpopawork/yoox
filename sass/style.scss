@@ -50,28 +50,15 @@ section {
   overflow: hidden;
 }
 
-.carousel-inner > .item {
-  &.next, &.active.right {
-    left: 0;
-    -webkit-transform: translate3d(33%, 0, 0);
-    transform: translate3d(33%, 0, 0);
-  }
-  &.prev, &.active.left {
-    left: 0;
-    -webkit-transform: translate3d(-33%, 0, 0);
-    transform: translate3d(-33%, 0, 0);
-  }
-}
-
-#productCarousel{
+#ynapCarousel{
   .carousel-inner > .item {
     &.next, &.active.right {
-      left: -90px;
+      left: 0;
       -webkit-transform: translate3d(33%, 0, 0);
       transform: translate3d(33%, 0, 0);
     }
     &.prev, &.active.left {
-      left: -90px;
+      left: 0;
       -webkit-transform: translate3d(-33%, 0, 0);
       transform: translate3d(-33%, 0, 0);
     }

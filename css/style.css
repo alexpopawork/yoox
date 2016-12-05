@@ -35,21 +35,12 @@ section.under-border {
 .carousel {
   overflow: hidden; }
 
-.carousel-inner > .item.next, .carousel-inner > .item.active.right {
+#ynapCarousel .carousel-inner > .item.next, #ynapCarousel .carousel-inner > .item.active.right {
   left: 0;
   -webkit-transform: translate3d(33%, 0, 0);
   transform: translate3d(33%, 0, 0); }
-.carousel-inner > .item.prev, .carousel-inner > .item.active.left {
+#ynapCarousel .carousel-inner > .item.prev, #ynapCarousel .carousel-inner > .item.active.left {
   left: 0;
-  -webkit-transform: translate3d(-33%, 0, 0);
-  transform: translate3d(-33%, 0, 0); }
-
-#productCarousel .carousel-inner > .item.next, #productCarousel .carousel-inner > .item.active.right {
-  left: -90px;
-  -webkit-transform: translate3d(33%, 0, 0);
-  transform: translate3d(33%, 0, 0); }
-#productCarousel .carousel-inner > .item.prev, #productCarousel .carousel-inner > .item.active.left {
-  left: -90px;
   -webkit-transform: translate3d(-33%, 0, 0);
   transform: translate3d(-33%, 0, 0); }
 
