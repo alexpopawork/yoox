@@ -323,7 +323,10 @@ a.download-pdf {
 
   #ynapCarousel #arrowleft, #ynapCarousel #arrowright {
     top: 33%;
-    padding: 2px 3px; } }
+    padding: 2px 3px; }
+
+  .size-16 {
+    font-size: 14px; } }
 @media screen and (max-width: 375px) {
   .yoox-text {
     margin: 13px 0px 32px;
